@@ -7,7 +7,6 @@
 </head>
 <body>
 
-    <!-- Header -->
     <header>
         <div class="logo">EventBook</div>
         <nav>
@@ -18,44 +17,24 @@
             <a href="#" class="btn">Book Now</a>
         </nav>
     </header>
-
-    <!-- Hero Section -->
     <section class="hero">
         <h1>Book Amazing Events Near You</h1>
         <p>Concerts, Weddings, Conferences & More</p>
         <button>Explore Events</button>
     </section>
 
-    <!-- Events Section -->
     <section class="events">
         <h2>Upcoming Events</h2>
         <div class="event-container">
-
+                {% for i in event_m %}
             <div class="event-card">
-                <h3>Music Concert</h3>
-                <p>Date: 25 Dec 2025</p>
-                <p>Location: Kochi</p>
-                <button>Book Ticket</button>
+                {{i.title}}
+                {{i.image}}
             </div>
-
-            <div class="event-card">
-                <h3>Wedding Event</h3>
-                <p>Date: 10 Jan 2026</p>
-                <p>Location: Trivandrum</p>
-                <button>Book Ticket</button>
-            </div>
-
-            <div class="event-card">
-                <h3>Tech Conference</h3>
-                <p>Date: 5 Feb 2026</p>
-                <p>Location: Bangalore</p>
-                <button>Book Ticket</button>
-            </div>
-
+                {% endfor %}
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>© 2025 EventBook. All Rights Reserved.</p>
     </footer>

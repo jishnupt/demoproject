@@ -1,0 +1,8 @@
+{% for i in eventt %}
+
+<p> Event name : {{i.E_name}} </p>
+<p>Event location : {{i.location}} </p>  <br>
+<img src="/home/{{i.E_image}}" alt="" width="180px" height="180px"> <br>
+<a href="{% url 'book_event' i.id %}"><button>BOOK NOW</button></a>
+
+{% endfor %}

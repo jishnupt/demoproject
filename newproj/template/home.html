@@ -11,7 +11,7 @@
         <div class="logo">EventBook</div>
         <nav>
             <a href="#">Home</a>
-            <a href="#">Events</a>
+            <a href="{% url 'booked_evnts' %}">Events booked</a>
             <a href="#">About</a>
             <a href="#">Contact</a>
             <a href="#" class="btn">Book Now</a>
@@ -27,10 +27,12 @@
         <h2>Upcoming Events</h2>
         <div class="event-container">
                 {% for i in event_m %}
+                <a href="{% url 'allevents' i.id %}">
             <div class="event-card">
                 {{i.title}}
-                {{i.image}}
+                
             </div>
+                </a>
                 {% endfor %}
         </div>
     </section>
@@ -41,3 +43,9 @@
 
 </body>
 </html>
+
+<style>
+    a{
+        text-decoration: none;
+    }
+</style>
